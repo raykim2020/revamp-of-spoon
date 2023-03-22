@@ -11,6 +11,7 @@ app.use(express.static('build'))
 
 app.use(require('./config/checkToken'));
 
+app.use(express.static(__dirname));
 app.use('/users', require('./routes/users'));
 app.use('/foodtrucks', require('./routes/foodTrucks'));
 app.use('/reviews', require('./routes/review'));
@@ -19,7 +20,7 @@ app.get('/*', function (req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3000;
 // PORT
 app.listen(port, function () {
     console.log(`Express app running on port ${port}`)

@@ -1,5 +1,5 @@
 {
-  "proxy": "http://localhost:8080/",
+  "proxy": "http://localhost:3000/",
   "name": "roaming-food-trucks",
   "version": "0.1.0",
   "engines": {
